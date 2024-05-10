@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./Error";
 import Team from "./Team";
 import Player from "./Player";
+import AddPlayer from './AddPlayer';
 
 
 const router = createBrowserRouter([
