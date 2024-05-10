@@ -27,3 +27,8 @@
   text-align: center;
   margin: 5px;
 }
+
+.roster-container {
+  border: solid;
+  margin: 5px;
+}
