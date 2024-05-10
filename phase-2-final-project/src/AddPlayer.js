@@ -36,7 +36,22 @@ function AddPlayer() {
         } else if (e.target.id === "imageURL") {
             setNewPlayer({...newPlayer, imageURL: e.target.value});
         };
-    }
+    };
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        setNewPlayer({
+            firstName: "",
+            lastName: "",
+            position: "",
+            ppg: "",
+            apg: "",
+            rpg: "",
+            age: "",
+            salary: "",
+            imageURL: ""
+        });
+    };
     
     console.log(newPlayer);
 
@@ -46,7 +61,7 @@ function AddPlayer() {
                 <NavBar />
             </header>
             <main>
-                <form className="form">
+                <form className="form" onSubmit={handleSubmit}>
                     <table>
                         <tbody>
                             <tr>
