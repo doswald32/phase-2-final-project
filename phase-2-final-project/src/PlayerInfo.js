@@ -1,19 +1,18 @@
 import NavBar from "./NavBar";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function PlayerInfo() {
-    // const [player, setPlayer] = useState({});
-    // const [team, setTeam] = useState("");
+    const [player, setPlayer] = useState({});
     const params = useParams();
-    // const playerID = params.id;
+    const playerID = params;
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:3001/${teamID}/${playerID}`)
-    //     .then(r => r.json())
-    //     .then(data => setPlayer(data))
-    //     .catch(error => console.error(error));
-    // }, [playerID, team]);
+    useEffect(() => {
+        fetch("http://localhost:3001/Teams")
+        .then(r => r.json())
+        .then((data) => )
+        .catch(error => console.error(error));
+    }, [playerID]);
 
     return (
         <>
