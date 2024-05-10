@@ -16,12 +16,6 @@ function NavBar() {
               Team
             </NavLink>
             <NavLink 
-            to="/playerInfo"
-            className="nav-link"
-            >
-              Player Info
-            </NavLink>
-            <NavLink 
             to="/add-player"
             className="nav-link"
             >

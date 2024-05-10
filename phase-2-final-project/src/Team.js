@@ -1,12 +1,10 @@
 import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
-import PlayerCard from "./PlayerCard";
+import PlayerList from "./PlayerList";
 import { Link } from "react-router-dom";
 
 function Team() {
     const [roster, setRoster] = useState([]);
-    // const params = useParams();
-    // const teamID = params.id;
 
     useEffect(() => {
         fetch("http://localhost:3001/Teams")
@@ -15,7 +13,6 @@ function Team() {
     }, []);
 
     function handleRoster(e) {
-        console.log(e.target.id);
         if (roster.length === 1) {
             if (e.target.id === "bulls-roster") {
                 roster.filter((team) => setRoster(team.Bulls));
@@ -49,8 +46,6 @@ function Team() {
                 });
             } 
     };
-
-    console.log(roster);
 
     return (
         <>
@@ -87,7 +82,7 @@ function Team() {
                 </div>
                 <div className="roster-container">
                     <ul className="player">{roster.map((player) => {
-                        return <li key={player.id}><Link to={`/playerInfo/${player.id}`}><PlayerCard name={player.name}/></Link></li>
+                        return <li key={player.id}><Link to={`/playerInfo/${player.id}`}><PlayerList name={player.name}/></Link></li>
                     })}</ul>
                 </div>
             </main>
