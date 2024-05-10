@@ -21,6 +21,12 @@ function NavBar() {
             >
               Player Info
             </NavLink>
+            <NavLink 
+            to="/login"
+            className="nav-link"
+            >
+              Add A Player
+            </NavLink>
         </nav>
     );
 };
