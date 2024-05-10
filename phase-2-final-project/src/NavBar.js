@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function NavBar() {
     return (
         <nav>
@@ -11,17 +13,16 @@ function NavBar() {
             to="/about"
             className="nav-link"
             >
-              About
+              Team
             </NavLink>
             <NavLink 
             to="/login"
             className="nav-link"
             >
-              Login
+              Player Info
             </NavLink>
         </nav>
     );
 };
-}
 
 export default NavBar
