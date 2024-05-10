@@ -5,11 +5,29 @@ import reportWebVitals from './reportWebVitals';
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./Error";
+import Team from "./Team";
+import Player from "./Player";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/team",
+    element: <Team />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/player",
+    element: <Player />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/add-player",
+    element: <AddPlayer />,
     errorElement: <Error />,
   }
 ]);
