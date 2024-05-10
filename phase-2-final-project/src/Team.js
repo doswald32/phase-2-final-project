@@ -23,23 +23,23 @@ function Team() {
                         <p>Click to See Roster</p>
                     </div>
                     <div className="team">
-                        <h2>Chicago Bulls</h2>
-                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/chi.png&h=200&w=200" alt="Bulls logo"/>
+                        <h2>Milwaukee Bucks</h2>
+                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/mil.png&h=200&w=200" alt="Bucks logo"/>
                         <p>Click to See Roster</p>
                     </div>
                     <div className="team">
-                        <h2>Chicago Bulls</h2>
-                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/chi.png&h=200&w=200" alt="Bulls logo"/>
+                        <h2>Indiana Pacers</h2>
+                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/ind.png&h=200&w=200" alt="Pacers logo"/>
                         <p>Click to See Roster</p>
                     </div>
                     <div className="team">
-                        <h2>Chicago Bulls</h2>
-                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/chi.png&h=200&w=200" alt="Bulls logo"/>
+                        <h2>Detroit Pistons</h2>
+                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/det.png&h=200&w=200" alt="Pistons logo"/>
                         <p>Click to See Roster</p>
                     </div>
                     <div className="team">
-                        <h2>Chicago Bulls</h2>
-                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/chi.png&h=200&w=200" alt="Bulls logo"/>
+                        <h2>Cleveland Cavaliers</h2>
+                        <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/cle.png&h=200&w=200" alt="Cavaliers logo"/>
                         <p>Click to See Roster</p>
                     </div>
                 </div>
