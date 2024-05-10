@@ -1,33 +1,45 @@
 import NavBar from "./NavBar";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import PlayerCard from "./PlayerCard";
+import { Link, useParams } from "react-router-dom";
 
 function Team() {
     const [roster, setRoster] = useState([]);
+    const params = useParams();
+    const teamID = params.id;
+
+    useEffect(() => {
+        fetch("http://localhost:3001/Teams")
+        .then(r => r.json())
+        .then(data => setRoster(data))
+    }, [])
 
     function handleRoster(e) {
+        console.log(e.target.id);
         if (e.target.id === "bulls-roster") {
-            fetch("http://localhost:3001/Bulls")
-            .then(r => r.json())
-            .then(data => setRoster(data))
-        } else if (e.target.id === "bucks-roster") {
-            fetch("http://localhost:3001/Bucks")
-            .then(r => r.json())
-            .then(data => setRoster(data))
-        } else if (e.target.id === "pacers-roster") {
-            fetch("http://localhost:3001/Pacers")
-            .then(r => r.json())
-            .then(data => setRoster(data))
-        } else if (e.target.id === "pistons-roster") {
-            fetch("http://localhost:3001/Pistons")
-            .then(r => r.json())
-            .then(data => setRoster(data))
-        } else if (e.target.id === "cavaliers-roster") {
-            fetch("http://localhost:3001/Cavaliers")
-            .then(r => r.json())
-            .then(data => setRoster(data))
+            let bullsRoster = roster.filter((team) => setRoster(team.Bulls));
+        // } else if (e.target.id === "bucks-roster") {
+        //     fetch("http://localhost:3001/Bucks")
+        //     .then(r => r.json())
+        //     .then(data => setRoster(data))
+        // } else if (e.target.id === "pacers-roster") {
+        //     fetch("http://localhost:3001/Pacers")
+        //     .then(r => r.json())
+        //     .then(data => setRoster(data))
+        // } else if (e.target.id === "pistons-roster") {
+        //     fetch("http://localhost:3001/Pistons")
+        //     .then(r => r.json())
+        //     .then(data => setRoster(data))
+        // } else if (e.target.id === "cavaliers-roster") {
+        //     fetch("http://localhost:3001/Cavaliers")
+        //     .then(r => r.json())
+        //     .then(data => setRoster(data))
+        } else {
+            console.log("oops");
         }
     };
+
+    console.log(roster);
 
     return (
         <>
@@ -64,7 +76,7 @@ function Team() {
                 </div>
                 <div className="roster-container">
                     <ul className="player">{roster.map((player) => {
-                        return <li key={player.id}><PlayerCard name={player.name}/></li>
+                        return <li key={player}><Link to={`/playerInfo/${player.id}`}><PlayerCard name={player.name}/></Link></li>
                     })}</ul>
                 </div>
             </main>

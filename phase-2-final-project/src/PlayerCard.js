@@ -1,4 +1,4 @@
-function PlayerCard({ imageURL, name }) {
+function PlayerCard({ name }) {
     return (
         <div id="player-card">
             <p>{name}</p>

@@ -52,8 +52,6 @@ function AddPlayer() {
             imageURL: ""
         });
     };
-    
-    console.log(newPlayer);
 
     return (
         <>

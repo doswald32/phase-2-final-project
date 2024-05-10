@@ -6,7 +6,7 @@ import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./Error";
 import Team from "./Team";
-import Player from "./Player";
+import PlayerInfo from "./PlayerInfo";
 import AddPlayer from './AddPlayer';
 
 
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/player",
-    element: <Player />,
+    path: "/playerInfo/:id",
+    element: <PlayerInfo />,
     errorElement: <Error />,
   },
   {
