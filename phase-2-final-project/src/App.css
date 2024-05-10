@@ -9,4 +9,10 @@
   text-decoration: none;
   text-align: center;
   color: white;
+};
+
+.button {
+  display: block;
+  margin: auto;
+  background-color: black;
 }

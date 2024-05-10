@@ -7,27 +7,48 @@ function AddPlayer() {
                 <NavBar />
             </header>
             <main>
-                <form>
-                    <label>First Name: </label>
-                    <input type="text"/>
-                    <label>Last Name: </label>
-                    <input type="text"/>
-                    <label>Position: </label>
-                    <input type="text"/>
-                    <label>PPPG: </label>
-                    <input type="text"/>
-                    <label>APG: </label>
-                    <input type="text"/>
-                    <label>RPG: </label>
-                    <input type="text"/>
-                    <label>Age: </label>
-                    <input type="text"/>
-                    <label>Salary: </label>
-                    <input type="text"/>
-                    <label>Image URL: </label>
-                    <input type="text"/>
-                    <br/>
-                    <button>Submit</button>
+                <form className="form">
+                    <table>
+                        <tr>
+                            <td align="right">First Name: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Last Name: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Position: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">PPPG: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">APG: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">RPG: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Age: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Salary: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Image URL: </td>
+                            <td align="left"><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <button className="button">Submit</button>
+                        </tr>
+                    </table>
                 </form>
             </main>
         </>

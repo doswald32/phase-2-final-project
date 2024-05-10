@@ -10,19 +10,19 @@ function NavBar() {
               Home
             </NavLink>
             <NavLink
-            to="/about"
+            to="/team"
             className="nav-link"
             >
               Team
             </NavLink>
             <NavLink 
-            to="/login"
+            to="/player"
             className="nav-link"
             >
               Player Info
             </NavLink>
             <NavLink 
-            to="/login"
+            to="/add-player"
             className="nav-link"
             >
               Add A Player
