@@ -1,42 +1,53 @@
 import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
 import PlayerCard from "./PlayerCard";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Team() {
     const [roster, setRoster] = useState([]);
-    const params = useParams();
-    const teamID = params.id;
+    // const params = useParams();
+    // const teamID = params.id;
 
     useEffect(() => {
         fetch("http://localhost:3001/Teams")
         .then(r => r.json())
         .then(data => setRoster(data))
-    }, [])
+    }, []);
 
     function handleRoster(e) {
         console.log(e.target.id);
-        if (e.target.id === "bulls-roster") {
-            let bullsRoster = roster.filter((team) => setRoster(team.Bulls));
-        // } else if (e.target.id === "bucks-roster") {
-        //     fetch("http://localhost:3001/Bucks")
-        //     .then(r => r.json())
-        //     .then(data => setRoster(data))
-        // } else if (e.target.id === "pacers-roster") {
-        //     fetch("http://localhost:3001/Pacers")
-        //     .then(r => r.json())
-        //     .then(data => setRoster(data))
-        // } else if (e.target.id === "pistons-roster") {
-        //     fetch("http://localhost:3001/Pistons")
-        //     .then(r => r.json())
-        //     .then(data => setRoster(data))
-        // } else if (e.target.id === "cavaliers-roster") {
-        //     fetch("http://localhost:3001/Cavaliers")
-        //     .then(r => r.json())
-        //     .then(data => setRoster(data))
-        } else {
-            console.log("oops");
-        }
+        if (roster.length === 1) {
+            if (e.target.id === "bulls-roster") {
+                roster.filter((team) => setRoster(team.Bulls));
+            } else if (e.target.id === "bucks-roster") {
+                roster.filter((team) => setRoster(team.Bucks));
+            } else if (e.target.id === "pacers-roster") {
+                roster.filter((team) => setRoster(team.Pacers));
+            } else if (e.target.id === "pistons-roster") {
+                roster.filter((team) => setRoster(team.Pistons));
+            } else if (e.target.id === "cavaliers-roster") {
+                roster.filter((team) => setRoster(team.Cavaliers));
+            } else {
+                console.log("oops");
+            }} else {
+                fetch("http://localhost:3001/Teams")
+                .then(r => r.json())
+                .then((data) => {
+                    if (e.target.id === "bulls-roster") {
+                        data.filter((team) => setRoster(team.Bulls))
+                    } else if (e.target.id === "bucks-roster") {
+                        data.filter((team) => setRoster(team.Bucks))
+                    } else if (e.target.id === "pacers-roster") {
+                        data.filter((team) => setRoster(team.Pacers))
+                    } else if (e.target.id === "pistons-roster") {
+                        data.filter((team) => setRoster(team.Pistons))
+                    } else if (e.target.id === "cavaliers-roster") {
+                        data.filter((team) => setRoster(team.Cavaliers))
+                    } else {
+                        console.log("oops!");
+                    };
+                });
+            } 
     };
 
     console.log(roster);
@@ -76,7 +87,7 @@ function Team() {
                 </div>
                 <div className="roster-container">
                     <ul className="player">{roster.map((player) => {
-                        return <li key={player}><Link to={`/playerInfo/${player.id}`}><PlayerCard name={player.name}/></Link></li>
+                        return <li key={player.id}><Link to={`/playerInfo/${player.id}`}><PlayerCard name={player.name}/></Link></li>
                     })}</ul>
                 </div>
             </main>
