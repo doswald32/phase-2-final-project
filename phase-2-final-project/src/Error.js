@@ -1,3 +1,4 @@
+import NavBar from "./NavBar";
 import { useRouteError } from "react-router-dom";
 
 function ErrorPage() {
