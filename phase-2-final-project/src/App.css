@@ -16,3 +16,16 @@
   margin: auto;
   background-color: black;
 }
+
+.team-container {
+  border: solid;
+  display: inline-block;
+  margin: auto;
+}
+
+.team {
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+  border: solid;
+}
