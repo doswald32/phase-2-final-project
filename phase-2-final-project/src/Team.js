@@ -63,9 +63,9 @@ function Team() {
                     </div>
                 </div>
                 <div className="roster-container">
-                    <div>{roster.map((player) => {
-                        return <PlayerCard key={player.id} name={player.name} imageURL={player.imageURL}/>
-                    })}</div>
+                    <ul className="player">{roster.map((player) => {
+                        return <li key={player.id}><PlayerCard name={player.name}/></li>
+                    })}</ul>
                 </div>
             </main>
         </>

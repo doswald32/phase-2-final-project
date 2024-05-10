@@ -1,7 +1,6 @@
 function PlayerCard({ imageURL, name }) {
     return (
-        <div>
-            <img src={imageURL} alt="player image"/>
+        <div id="player-card">
             <p>{name}</p>
         </div>
     )

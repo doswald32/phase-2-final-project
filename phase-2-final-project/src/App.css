@@ -11,12 +11,6 @@
   color: white;
 };
 
-.button {
-  display: block;
-  margin: auto;
-  background-color: black;
-}
-
 .team-container {
   display: inline-block;
   margin: auto;
@@ -29,6 +23,13 @@
 }
 
 .roster-container {
-  border: solid;
-  margin: 5px;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+#player-card {
+  margin: auto;
+  height: auto;
+  vertical-align: middle;
 }
